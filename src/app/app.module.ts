@@ -5,11 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import {MatButtonModule, MatMenuModule, MatGridListModule, MatCardModule, MatDividerModule} from '@angular/material';
+import {MatButtonModule, MatMenuModule, MatGridListModule, MatCardModule, MatDividerModule, MatTableModule} from '@angular/material';
 import { HouseCardsMenuComponent } from './house-cards-menu/house-cards-menu.component';
 import { HouseCardComponent } from './house-card/house-card.component';
 import { SportsListComponent } from './sports-list/sports-list.component';
 import { SportComponent } from './sport/sport.component';
+import { HomeComponent } from './home/home.component';
+import { SportPageComponent } from './sport-page/sport-page.component';
+import {RouterModule, Routes} from '@angular/router';
+import { DetailTableComponent } from './detail-table/detail-table.component';
+import { IFrameComponent } from './i-frame/i-frame.component';
+const appRoutes: Routes = [
+  {path: '', component: HomeComponent},
+  {path: 'sport', component: SportPageComponent},
+
+];
 
 @NgModule({
   declarations: [
@@ -18,9 +28,14 @@ import { SportComponent } from './sport/sport.component';
     HouseCardsMenuComponent,
     HouseCardComponent,
     SportsListComponent,
-    SportComponent
+    SportComponent,
+    HomeComponent,
+    SportPageComponent,
+    DetailTableComponent,
+    IFrameComponent
   ],
   imports: [
+    RouterModule.forRoot(appRoutes, {}),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -28,7 +43,8 @@ import { SportComponent } from './sport/sport.component';
     MatButtonModule,
     MatGridListModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

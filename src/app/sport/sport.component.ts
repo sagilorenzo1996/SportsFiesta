@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sport',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SportComponent implements OnInit {
 
-  constructor() { }
+  @Input() iconImage: string;
+  @Input() sportName: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  goTo(sport: string) {
+    location.href = '/sport?code=' + sport;
+  }
 }

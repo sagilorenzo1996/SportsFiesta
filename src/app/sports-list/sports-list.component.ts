@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sports-list',
@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SportsListComponent implements OnInit {
 
-  constructor() { }
+  iconImages: Array<string> = [];
+  sportList: Array<string> = [];
+
+  constructor() {
+    this.iconImages = window['sportsFiesta']['iconImages'];
+    this.sportList = window['sportsFiesta']['sportsList'];
+  }
 
   ngOnInit() {
   }
