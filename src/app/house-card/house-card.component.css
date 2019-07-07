@@ -1,4 +1,24 @@
-.house-image{
-  height: 400px;
+.house-image-container{
+  height: 300px;
   width: 200px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.house-image{
+  max-width: 100%;
+}
+
+.score-header{
+  color: azure;
+  margin-block-end:0.2em;
+}
+
+.score-slogan{
+  color: azure;
+}
+
+.score-value{
+  color: azure;
+  font-size: 4em
 }

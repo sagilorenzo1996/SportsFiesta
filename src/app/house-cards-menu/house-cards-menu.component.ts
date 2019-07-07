@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-house-cards-menu',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HouseCardsMenuComponent implements OnInit {
 
-  logoImages: Array<string> = ['../../assets/image/titans.png','../../assets/image/trojans.png','../../assets/image/spartans.png','../../assets/image/vikings.png']
-  constructor() { }
+  logoImages: Array<string> = [];
+  houseNames: Array<string> = [];
+
+  constructor() {
+    this.logoImages = window['sportsFiesta']['images'];
+    this.houseNames = window['sportsFiesta']['data'];
+  }
 
   ngOnInit() {
   }

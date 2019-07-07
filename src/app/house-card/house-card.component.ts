@@ -8,11 +8,17 @@ import {Component, Input, OnInit} from '@angular/core';
 export class HouseCardComponent implements OnInit {
 
   @Input() logoImage: string;
+  @Input() name: any;
+  hide: boolean = true;
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  showScores() {
+    this.hide = !this.hide;
   }
 
 }
