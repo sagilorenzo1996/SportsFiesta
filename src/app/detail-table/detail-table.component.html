@@ -4,8 +4,43 @@
         The actual rendered columns are set as a property on the row definition" -->
   <!-- Name Column -->
   <ng-container matColumnDef="matchName">
-    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <th mat-header-cell *matHeaderCellDef> Match Name </th>
     <td mat-cell *matCellDef="let element"> {{element.matchName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="totalMatches">
+    <th mat-header-cell *matHeaderCellDef> Total Matches </th>
+    <td mat-cell *matCellDef="let element"> {{element.totalMatches}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="remainingMatches">
+    <th mat-header-cell *matHeaderCellDef> Remaining Matches </th>
+    <td mat-cell *matCellDef="let element"> {{element.remainingMatches}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="titans">
+    <th mat-header-cell *matHeaderCellDef> Titans score </th>
+    <td mat-cell *matCellDef="let element"> {{element.titans}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="trojans">
+    <th mat-header-cell *matHeaderCellDef> Trojans score </th>
+    <td mat-cell *matCellDef="let element"> {{element.trojans}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="spartans">
+    <th mat-header-cell *matHeaderCellDef> Spartans score</th>
+    <td mat-cell *matCellDef="let element"> {{element.spartans}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="vikings">
+    <th mat-header-cell *matHeaderCellDef> Vikings score</th>
+    <td mat-cell *matCellDef="let element"> {{element.vikings}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="viewBoard">
+    <th mat-header-cell *matHeaderCellDef> View Flow </th>
+    <td mat-cell *matCellDef="let element"> {{element.viewBoard}} </td>
   </ng-container>
 
   <!--&lt;!&ndash; Weight Column &ndash;&gt;-->

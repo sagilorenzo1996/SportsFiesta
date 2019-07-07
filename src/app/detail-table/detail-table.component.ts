@@ -9,7 +9,7 @@ export class DetailTableComponent implements OnInit {
 
   sportCode: string;
   sportData: any;
-  displayedColumns: string[] = ['matchName'];
+  displayedColumns: string[] = ['matchName', 'totalMatches', 'remainingMatches', 'titans', 'trojans', 'spartans', 'vikings', 'viewBoard'];
 
   constructor() {
     const url = new URL(window.location.href);
