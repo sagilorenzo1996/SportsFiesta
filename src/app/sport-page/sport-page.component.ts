@@ -1,11 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
   selector: 'app-sport-page',
   templateUrl: './sport-page.component.html',
   styleUrls: ['./sport-page.component.css']
 })
-export class SportPageComponent implements OnInit {
+export class SportPageComponent implements OnInit, OnChanges {
 
   @Input() sportCode: string;
 
@@ -14,6 +14,10 @@ export class SportPageComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    this.ngOnInit();
   }
 
 }
