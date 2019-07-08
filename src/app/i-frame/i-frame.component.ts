@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-i-frame',
@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IFrameComponent implements OnInit {
 
-  constructor() { }
+  @Input() iFrameLink: string;
+  @Input() matchName: string;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  showModal(modalId) {
+    document.getElementById(modalId).style.display = 'block';
+  }
+
+  hideModal(modalId) {
+    document.getElementById(modalId).style.display = 'none';
   }
 
 }

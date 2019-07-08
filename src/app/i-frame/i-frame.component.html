@@ -1,1 +1,11 @@
-<p>i-frame works!</p>
+<button mat-button color="warn" [id]="matchName+'id'" (click)="showModal(matchName+'modal')">Open Board</button>
+
+<div [id]="matchName+'modal'" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" (click)="hideModal(matchName+'modal')">&times;</span>
+    <p>Some text in the Modal..{{matchName}}</p>
+  </div>
+
+</div>
