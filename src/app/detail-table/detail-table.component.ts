@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-detail-table',
@@ -7,13 +7,11 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DetailTableComponent implements OnInit {
 
-  sportCode: string;
+  @Input() sportCode: string;
   sportData: any;
   displayedColumns: string[] = ['matchName', 'totalMatches', 'remainingMatches', 'titans', 'trojans', 'spartans', 'vikings', 'viewBoard'];
 
   constructor() {
-    const url = new URL(window.location.href);
-    this.sportCode = url.searchParams.get('code');
     this.sportData = window['sportsFiesta'][this.sportCode];
     console.log(this.sportData);
 

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-sport-page',
@@ -6,6 +6,8 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./sport-page.component.css']
 })
 export class SportPageComponent implements OnInit {
+
+  @Input() sportCode: string;
 
   constructor() {
 

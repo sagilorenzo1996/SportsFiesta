@@ -1,4 +1,4 @@
-import {Component, NgModule, OnInit} from '@angular/core';
+import {Component, EventEmitter, NgModule, OnInit, Output} from '@angular/core';
 import {MatButtonModule, MatMenuModule} from '@angular/material';
 
 @Component({
@@ -8,11 +8,15 @@ import {MatButtonModule, MatMenuModule} from '@angular/material';
 })
 export class NavMenuComponent implements OnInit {
 
+  @Output() showHome: EventEmitter<boolean> = new EventEmitter();
   constructor() { }
 
   ngOnInit() {
   }
 
+  showHomeView(){
+    this.showHome.emit(true);
+  }
 
 
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-sports-list',
@@ -9,6 +9,7 @@ export class SportsListComponent implements OnInit {
 
   iconImages: Array<string> = [];
   sportList: Array<string> = [];
+  @Output() clickedSport: EventEmitter<string> = new EventEmitter();
 
   constructor() {
     this.iconImages = window['sportsFiesta']['iconImages'];
@@ -16,6 +17,10 @@ export class SportsListComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  outputToParent($event) {
+    this.clickedSport.emit($event);
   }
 
 }

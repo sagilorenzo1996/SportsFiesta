@@ -1,2 +1,3 @@
-
-<router-outlet></router-outlet>
+<app-nav-menu (showHome)="setToHome($event)"></app-nav-menu>
+<app-home (clickedSport)="getCode($event)" *ngIf="showHome"></app-home>
+<app-sport-page [sportCode]="sportCode" *ngIf="sportCode!=='nosport' && !showHome"></app-sport-page>

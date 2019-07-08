@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-sport',
@@ -9,6 +9,7 @@ export class SportComponent implements OnInit {
 
   @Input() iconImage: string;
   @Input() sportName: string;
+  @Output() clickedSport: EventEmitter<string> = new EventEmitter();
 
   constructor() {
   }
@@ -17,6 +18,6 @@ export class SportComponent implements OnInit {
   }
 
   goTo(sport: string) {
-    location.href = '/sport?code=' + sport;
+    this.clickedSport.emit(sport);
   }
 }
