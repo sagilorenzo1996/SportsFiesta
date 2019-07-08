@@ -4,8 +4,18 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close" (click)="hideModal(matchName+'modal')">&times;</span>
-    <p>Some text in the Modal..{{matchName}}</p>
+    <span class="header">{{ matchName }}</span><div class="close" (click)="hideModal(matchName+'modal')">&times;</div>
+    <div class="i-frame-container">
+      <iframe id="carrom-frame"
+              seamless="seamless"
+              class="i-frame"
+              [src]="iFrameLink | safe"
+              frameborder="0"
+              scrolling="auto"
+              allowtransparency="true">
+      </iframe>
+
+    </div>
   </div>
 
 </div>

@@ -15,6 +15,7 @@ import { SportPageComponent } from './sport-page/sport-page.component';
 import {RouterModule, Routes} from '@angular/router';
 import { DetailTableComponent } from './detail-table/detail-table.component';
 import { IFrameComponent } from './i-frame/i-frame.component';
+import { SafePipe } from './safe.pipe';
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'sport', component: SportPageComponent},
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     HomeComponent,
     SportPageComponent,
     DetailTableComponent,
-    IFrameComponent
+    IFrameComponent,
+    SafePipe
   ],
   imports: [
     RouterModule.forRoot(appRoutes, {}),
