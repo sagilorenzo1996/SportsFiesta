@@ -5,6 +5,20 @@
   text-align: center;
 }
 
+.house-value-container{
+  padding: 5%;
+  color: azure;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.score-bottom{
+  color: azure;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 3em
+}
+
 .house-image{
   max-width: 100%;
 }

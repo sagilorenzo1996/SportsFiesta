@@ -1,8 +1,9 @@
 <div class="house-image-container" (click)="showScores()" *ngIf="hide">
   <img [src]="logoImage" [alt]="logoImage" class="house-image">
+  <div class="score-bottom">{{ name?.score }}</div>
 </div>
 <div class="house-image-container" (click)="showScores()" *ngIf="!hide">
-  <div>
+  <div class="house-value-container">
     <h1 class="score-header">{{ name?.name }}</h1>
     <span class="score-slogan">{{ name?.slogan  }}</span>
     <h1 class="score-value">{{ name?.score }}</h1>
